@@ -14,7 +14,7 @@ contract ProNFT is ERC721, ERC721URIStorage, AccessControl {
     }
 
     function _baseURI() internal pure override returns (string memory) {
-        return "http://localhost:3000";
+        return "https://gateway.pinata.cloud/ipfs/";
     }
 
     function safeMint(address to, string memory uri, uint _tokenId) public onlyRole(MINTER_ROLE) {
